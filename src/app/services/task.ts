@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class TaskService {
-  private baseUrl = 'http://localhost:3000/tasks';
+  private baseUrl = 'http://backend-habiba34-dev.apps.rm3.7wse.p1.openshiftapps.com/tasks';
 
   constructor(private http: HttpClient) {}
 

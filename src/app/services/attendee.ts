@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
 })
 export class AttendeeService {
 
-  private apiUrl = "http://localhost:3000/attendees";
+  private apiUrl = "http://backend-habiba34-dev.apps.rm3.7wse.p1.openshiftapps.com/attendees";
 
   constructor(private http: HttpClient) {}
 

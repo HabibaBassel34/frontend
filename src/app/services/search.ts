@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class SearchService {
 
-  apiUrl = "http://localhost:3000/search";
+  apiUrl = "http://backend-habiba34-dev.apps.rm3.7wse.p1.openshiftapps.com/search";
 
   constructor(private http: HttpClient) {}
 

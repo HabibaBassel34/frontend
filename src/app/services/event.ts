@@ -6,9 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EventsService {
-  private apiUrl = 'http://localhost:3000/events';
-  private tasksUrl = 'http://localhost:3000/tasks';
-  private invitationsUrl = 'http://localhost:3000/invitations';
+  private apiUrl = 'http://backend-habiba34-dev.apps.rm3.7wse.p1.openshiftapps.com/events';
+  private tasksUrl = 'http://backend-habiba34-dev.apps.rm3.7wse.p1.openshiftapps.com/tasks';
+  private invitationsUrl = 'http://backend-habiba34-dev.apps.rm3.7wse.p1.openshiftapps.com/invitations';
 
   constructor(private http: HttpClient) {}
 
@@ -22,7 +22,7 @@ export class EventsService {
   }
 
   // ========== EVENT OPERATIONS ==========
-  
+
   // Get all events (for current user)
   getEvents(): Observable<any> {
     return this.http.get(this.apiUrl, this.authHeader());
@@ -54,7 +54,7 @@ export class EventsService {
   }
 
   // ========== ATTENDEE OPERATIONS ==========
-  
+
   // Get event attendees
   getEventAttendees(eventId: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/${eventId}/attendees`, this.authHeader());
@@ -80,7 +80,7 @@ export class EventsService {
   }
 
   // ========== TASK OPERATIONS ==========
-  
+
   // Get tasks for an event
   getTasks(eventId: number): Observable<any> {
     return this.http.get(`${this.tasksUrl}/${eventId}/tasks`, this.authHeader());
@@ -102,10 +102,10 @@ export class EventsService {
   }
 
   // ========== SEARCH ==========
-  
+
   // Search events
   searchEvents(params: any): Observable<any> {
     const queryParams = new URLSearchParams(params).toString();
-    return this.http.get(`http://localhost:3000/search?${queryParams}`, this.authHeader());
+    return this.http.get(`http://backend-habiba34-dev.apps.rm3.7wse.p1.openshiftapps.com/search?${queryParams}`, this.authHeader());
   }
 }

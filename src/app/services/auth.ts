@@ -6,16 +6,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private api = 'http://localhost:3000/auth';
+  private api = 'http://backend-habiba34-dev.apps.rm3.7wse.p1.openshiftapps.com/auth';
 
   constructor(private http: HttpClient) {}
 
   signup(username: string, email: string, password: string): Observable<any> {
-    return this.http.post(`${this.api}/signup`, { 
-      username: username, 
-      email: email, 
-      password: password, 
-      role: 'Organizer' 
+    return this.http.post(`${this.api}/signup`, {
+      username: username,
+      email: email,
+      password: password,
+      role: 'Organizer'
     });
   }
 

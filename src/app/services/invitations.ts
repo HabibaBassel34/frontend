@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class InvitationsService {
-  private api = 'http://localhost:3000/attendees';
+  private api = 'http://backend-habiba34-dev.apps.rm3.7wse.p1.openshiftapps.com/attendees';
 
   constructor(private http: HttpClient) {}
 
